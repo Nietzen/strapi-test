@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:9.6.19
+    environment:
+      POSTGRES_USER: ${DOCKER_POSTGRES_USER:-strapi}
+      POSTGRES_PASSWORD: ${DOCKER_POSTGRES_PASSWORD:-strapi}
+      POSTGRES_DB: ${DOCKER_POSTGRES_DB:-strapi}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  pgdata:

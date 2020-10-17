@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/banana-dance",
+      "handler": "banana-dance.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/banana-dance",
+      "handler": "banana-dance.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/banana-dance",
+      "handler": "banana-dance.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
