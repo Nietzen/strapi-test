@@ -21,7 +21,7 @@ module.exports = ({ env }) => {
     },
   };
 
-  console.log("config", config);
+  console.log("config", config.connections.settings);
 
   return config;
 };
